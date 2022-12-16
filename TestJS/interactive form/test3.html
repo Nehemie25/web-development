@@ -1,0 +1,56 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="test3.css">
+    <title>Handle User Input</title>
+  </head>
+  <body>
+   <header>
+    <h1 id="titre"> Handle User Input </h1>
+  </header>
+  <div id="div-principale">
+  <main>
+    <form id="formulaire" class="formulaire">
+     <div id="hobby">
+      <h3 id="hobbies"> Hobbies </h4>
+      <input type="checkbox"  id="sports"name="sports" value="sports"/> sports<br/>
+      <input type="checkbox"  id="videoGames" name="videoGames" value="videoGames"/> videogames<br/>
+      <input type="checkbox"  id="music" name="music" value="music"/> music<br/>
+    </div>
+    <div id="transport">
+      <h3 id="transports"> Favourite mode of transport </h4>
+      <input type="radio" id="car" name="transportMode"  value="car"/> car<br/>
+      <input type="radio" id="bus"name="transportMode" value="bus"/> bus<br/>
+      <input type="radio"  id="other" name="transportMode" value="other"/>other<br/>
+      
+    </div>
+    <div id="music">
+      <h3 id="musics"> Favourite kind of music </h4>
+      <select id="musicKind" name="musicKind">
+        <option autofocus > Rock </option>
+        <option> Pop </option>
+        <option> Rap</option>
+      </select>
+    </div>
+   </form>
+    
+  </main>
+  <aside id="sidebar">
+    <h4 id="sidebar-content"> You enjoy: </h4>
+    <div id="sportDiv">
+    <ul id="youEnjoy"> 
+      <li> sports </li>
+      <li> videogames </li>
+      <li> music </li>
+    </ul>
+  </div>
+  <div id="transportDiv">
+    <p id="favouriteT"> Your favourite transport is: </p>
+  </div>
+<div id="musicDiv">
+    <p id="favouriteM"> Your favourite music is: </p>
+  </div>
+  </aside>
+</div>
+<script type="text/javascript" src="test3.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@font-face {
+	font-family:'Lato-Black';
+	src: url('font/Lato-Black.ttf');
+}
+@font-face {
+	font-family:'Lato-Light';
+	src: url('font/Lato-Light.ttf');
+}
+
+#entete {
+	border: 1px solid black;
+	
+
+}
+#titre {
+    width: 340px;
+	height: 45px;
+	margin: auto;
+	border: 1px solid black;
+	text-align: center;
+	font-family: Lato-Black;
+	
+}
+
+#menu{
+	
+	width: 260px;
+	height: 40px;
+	margin: auto;
+	border: 1px solid #6C757D;
+	background-color: #6C757D;
+	border-radius: 5px;
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 15px;
+}
+
+#principal {
+	width: 940px;
+	margin: auto;
+	border: 2px solid #EFEFEF;
+}
+h5 {
+	font-family: Lato-Black;
+	font-size: 20px;
+}
+
+p {
+	font-family: Lato-Light;
+	
+	
+	
+}
+
+#post-buttons {
+	width: 940px;
+	height: 40px;
+	margin: auto;
+	display: flex;
+	justify-content: flex-end;
+    
+}
+#ajouter
+{
+margin-right: 2.5px;
+}
+#supprimer
+{
+margin-left: 2.5px;
+}
+a {
+	text-decoration: none;
+	height: 40px;
+	border: 1px solid #6C757D;
+	border-radius: 5px;
+	line-height: 40px;
+	background-color: #6C757D;
+	color: white;
+	font-family: Lato-Black;
+}
+.fond-bleu {
+	background-color: blue;
+}
+
+.fond-marron {
+	background-color: brown;
+}
+.fond-vert {
+	background-color: green;
+}

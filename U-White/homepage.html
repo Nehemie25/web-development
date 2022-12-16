@@ -1,0 +1,321 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+      <head>
+        <meta charsert="utf-8" />
+        <link rel="stylesheet" href="homepage.css" />
+        <link rel="stylesheet" href="snow.css" />
+        <link rel="stylesheet" href="menu.css"/>
+        <link rel="stylesheet" href="slideMenu.css"/>
+        <title> Uwhite Demo </title>
+        <link rel="stylesheet"  media=" only screen and (max-width:900px)" href="homepage_mobile.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      </head>
+      <body>
+        <div id="calque"> </div>
+        <section id="productCart">
+               <div id="panier-retour">
+                 <span id="panier-link"> panier </span>
+                 <span id="retour-link"> retour </span>
+                 <p> Votre panier est reserve pendant </p>
+              </div>
+              <div id="cartContenu">
+                <figure id="orderedProducts">
+                  <img src="images\Products\White_1.jpg"  id="boughtProduct" alt="Grid_Block_Half_White" />
+                  <figcaption id="orderedProducts-labels">
+                    <h4> Modèle Blanc | -70% </h4>
+                    <span id="removeProduct"> * </span>
+                    <div id="quantity">
+                      <span> - </span>
+                      <span> 1 </span>
+                      <span> + </span>
+                    </div>
+                    <span id="orderedProducts-price"> 11.80 Euros </span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div id="commander">
+                <div id="coupon">
+                  <input type="text" id="applyCoupon" />
+                  <a id="apply"> appliquer </a>
+                  <p id="prix-total"> 
+                    <span id="sous-total"> Sous total </span>
+                    <span id="sous-total-number"> 145 Euros </span>
+                  </p>
+                  <a id="command"> Commander </a>
+                  <img src="images\Secure_Cart.png" id="secure-card" alt="secure-card" />
+                </div>
+              </div>
+           </section>
+
+           
+        <div id="corps">
+     	    <header id="entete">
+     	 		 <div id="header-band">
+             <a id="exclu"> <em>EXCLU </em> <em> -30% </em><em> | </em> <em> CODE</em> : <em>TOP </em> </a> 
+             <div id="baniereScroll">
+               <a href="#livraison"  class=""id="link1"> Livraison Offerte</a>
+               <a href="#satisfaits" id="link2" class="">+ 13500 Clients Satisfaits</a>
+               <a href="#rembourse" id="link3">Satisfait ou rembourse</a>
+               <a href="#support" id="link4">Support Francais</a>
+             </div>
+           </div>
+           <div id="contenaire">
+             <video autoplay muted loop id="myVideo">
+               <source src="videos/colgate.mp4" type="video/mp4">
+             </video>
+             <div id="content">
+               <h1>Title of the Slide</h1>
+               <p>Une phrase sur l'image du slide</p>  
+               <a id="enSavoir"> &nbsp;&nbsp;&nbsp; EN SAVOIR PLUS &nbsp;> &nbsp; &nbsp;&nbsp;</a>
+             </div>
+     	 	     <div id="real-header">
+               <div id="container">
+                 <div id="div-1"></div>
+                 <div id="div-1"></div>
+                 <div id="div-1"></div>
+               </div>
+     	 		     <p id="logo"><img src="images\U-White_Shop.png" id="U-White_Shop" alt="U-White_Shop" /></p>
+               <nav id="menu">
+     	 			     <ul id="menu1">
+     	 				     <li> Shop </li>
+     	 				     <li>   Blanchiment dentaire </li>
+     	 				     <li>   A propos  </li>
+                   <li>   Suivre ma Commande  </li>
+                   <li>   Aide  </li>
+     	 			     </ul>
+     	 		     </nav>
+               <i class="fa fa-shopping-cart" id="shoppingCart" style="font-size:24px"></i> 
+             </div>
+             
+     	 	 </div>
+       </header>
+       <div id="slideMenu"> </div>
+       <section id="grid-block1">
+         <div id="gridBlock1Calque">
+       	   <div id="text1">
+       	 	   <h1> 98.7% de la plaque dentaire <br/> éliminée en 60 secondes </h1>
+       	 		 <p> U-White la brosse a dents a ultrasons recommandée par les dentistes </p>
+       	 		 <a   id="je-decouvre" href="" > &nbsp; &nbsp; Je Decouvre> &nbsp;&nbsp;  </a>
+       	 	 </div>
+       	 	 <div id="photo1">
+       	 	   <img src="images\Grid_Block_Half_White.jpg"  id="Grid_Block_Half_White" alt="Grid_Block_Half_White" />
+       	 	 </div>
+         </div>
+       </section>
+       <section id="CIT-1">
+         <h1 id="raisons"> 5 bonnes raisons pour choisir U-White (V2) </h1>
+         <div id="advantages">
+           <figure id="icon1">
+             <img src="images\Icons_Homepage\Plaque_dentaire_eleminee.png" alt="Plaque_dentaire_eleminee"   id="Plaque_dentaire_eleminee" />
+             <figcaption> 98.7% de la plaque dentaire éliminée</figcaption>
+           </figure>
+           <figure id="icon2">
+             <img src="images\Icons_Homepage\Efficace.png" alt="Efficace"   id="Efficace" />
+             <figcaption> +13500 clients satisfaits</figcaption>
+           </figure>
+           <figure id="icon3">
+             <img src="images\Icons_Homepage\Clients_Satisfaits.png" alt="Clients_Satisfaits"   id="Clients_Satisfaits" />
+             <figcaption> Jusqu'à 3 fois plus efficace <em id="efficacite">qu'un nettoyage  classique </em></figcaption>
+          </figure>
+          <figure id="icon4">
+            <img src="images\Icons_Homepage\Recommande_par_les_dentistes.png" alt="Recommande_par_les_dentistes"   id="Recommande_par_les_dentistes" />
+            <figcaption> Recommandée par les dentistes</figcaption>
+          </figure>
+         </div>
+         <a   id="je-decouvre" href="" > &nbsp; &nbsp; Je Decouvre> &nbsp;&nbsp;  </a>
+       </section>
+       <section id="grid-block4">
+        <div id="gridBlock4Calque">
+         <div id="photo4">
+           <img src="images\Grid_Block_Half_Pink.jpg"  id="Grid_Block_Half_Pink" alt="Grid_Block_Half_Pink" />
+         </div>
+         <div id="text4">
+           <h1> 3 fois plus efficace qu'un brossage manuel </h1>
+           <p> Les ultrasons delogent les bacteries et la plaque dentaire accumulee au fil de la journee. Les poils en silicone assurent un <em id="brossage-360">
+              brossage a 360 sans agresser vos gencives </em>et entre les dents pour assurer une hygiene optimale. Rincez votre brosse a dents U-White puis appliquez un filet de dentifrice pour demarrer votre soin
+           </p>
+           <a   id="je-decouvre" href="" > &nbsp; &nbsp; Je Decouvre> &nbsp;&nbsp;  </a>
+         </div>
+       </div>
+       </section>
+       <section id="feature-product">
+         <div id="feature-product-image">
+           <figure id="White_1_div">
+             <img src="images\products\White_1.jpg"  id="White_1" alt="White_1" />
+           </figure>
+           <div id="feature-product-image-miniatures">
+             <figure> <img src="images\products\White_1.jpg"  id="White_1_miniature" alt="White_1" /> </figure>
+             <figure> <img src="images\products\Black_1.jpg"  id="Black_1_miniature" alt="Black_1" /> </figure>
+             <figure> <img src="images\products\Pink_1.jpg"  id="Rose_1_miniature" alt="Rose_1" /> </figure>
+             <figure> <img src="images\products\Blue_1.jpg"  id="Blue_1_miniature" alt="Blue_1" /> </figure>
+           </div>
+         </div>
+         <div id="feature-product-description">
+           <h1 id="titre">U-White™|La brosse a dents intelligente </h1>
+           <p id="prix">FCFA30,000.00 <em id="prix-barre">FCFA50,000.00</em> <br /> 
+          Vous économisez FCFA20,000.00 (40 %)
+          </p>
+          <div id="dropDown-glif">
+            <div id="dropDown-livraison">
+              <i class="fa fa-truck" aria-hidden="true" style="font-size:20px;"> </i><a  href=""  > Livraison OFFERTE   </a>  <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:16px;" id="arrow1"></i>
+            </div>
+            <div id="sousDiv1"> </div>
+            <div id="dropDown-rembourse">
+              <i class="fa fa-gift" aria-hidden="true" style="font-size:20px;"> </i> <a href=""> Satisfait ou Rembourse    </a> <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:16px;" id="arrow2"></i>
+            </div>
+            <div id="sousDiv2"> </div>
+            <div id="dropDown-support">
+              <i  class="fa fa-comments" aria-hidden="true" style="font-size:20px;"> </i><a href=""> Support Francais  </a>  <i class="fa fa-chevron-down" aria-hidden="true" style="font-size:16px;" id="arrow3"></i>
+            </div>
+            <div id="sousDiv3"> </div>
+          </div>
+          Couleur
+          <ul id="product-color">   
+            <li> Blanc </li>
+            <li> Noir </li>
+            <li> Rose </li>
+            <li> Bleu </li>
+          </ul>
+          <div id="imageScroll">
+            <figure> 
+              <img src="images\Icons_Homepage\Plaque_dentaire_eleminee.png" alt="imageScroll1" id="mageScroll1" /> 
+              <figcaption>98.7% de plaque dentaire eliminee </figcaption>
+            </figure>
+            <figure> 
+              <img src="images\Icons_Homepage\Efficace.png" alt="imageScroll1" id="imageScroll1" /> 
+              <figcaption>+ 13500 clients satisfaits</figcaption>
+            </figure>
+            <figure> 
+              <img src="images\Icons_Homepage\Clients_Satisfaits.png" alt="imageScroll1" id="imageScroll1" /> 
+              <figcaption>Jusqu'a 3 fois plus efficace</figcaption>
+            </figure>
+            <figure> 
+              <img src="images\Icons_Homepage\Recommande_par_les_dentistes.png" alt="imageScroll1" id="imageScroll1" /> 
+              <figcaption>Recommandee par les dentistes </figcaption>
+            </figure>
+          </div>
+          <div id="scrollCommand">
+            <i class="fa fa-circle" id="control1"  style="font-size:10px;"> </i>
+            <i class="fa fa-circle" id="control2"  style="font-size:10px;"> </i>
+            <i class="fa fa-circle"  id="control3" style="font-size:10px;"> </i>
+            <i class="fa fa-circle"  id="control4" style="font-size:10px;"> </i>
+          </div>
+          <p id="ajouter-bouton">
+            <a id="ajouter-au-panier" href=""> + AJOUTER AU PANIER </a>
+          </p>
+          <figure id="secure-card-div">
+            <img src="images\Secure_Cart.png" id="secure-card" alt="secure-card"  />
+          </figure>
+          <article id="description">
+            <h1 id="titre-description"> BLANCHISSEZ VOS DENTS À <br/>CHAQUE BROSSAGE !</h1>
+            <p> 3 fois plus efficace qu’un brossage classique, plus hygiénique, plus économique et blanchissante, U-White offre un soin 2-en-1 brossage/ blanchiment en seulement 60 secondes.
+            </p>
+            <p>Ses vibrations délogent 98,7% de la plaque dentaire et ses poils en silicone assurent un brossage efficace à 360° pour un sourire éclatant de confiance.</p>
+         </article>
+       </div> 
+     </section>
+     <section id="grid-block2">
+      <div id="gridBlock2Calque">
+       <div id="photo2">
+        <img src="images\Grid_Block_Half_Black.jpg"  id="Grid_Block_Half_Black" alt="Grid_Block_Half_Black" />
+      </div>
+      <div id="text2">
+        <h1> Un brossage 2-en-1 en 60 secondes </h1>
+        <p> Les poils en silicone souples brossent efficacement là où une brosse à dents classique ne peut pas aller. La luminothérapie offre un soin blanchissant en 60 secondes pour un sourire rayonnant. Découvrez le brossage 2-en-1 nouvelle génération
+        </p>
+        <a   id="je-decouvre" href="" > &nbsp; &nbsp; Je Decouvre> &nbsp;&nbsp;  </a>
+      </div>
+    </div>
+    </section>
+    <section id="grid-block3">
+     <div id="gridBlock3Calque">
+      <div id="text3">
+        <h1> 3% de nos ventes <br/>sont reversés à l'association</h1>
+        <figure id="sourire">
+          <img src="images\Smile_U-White.png" id="sourire-pour-tous" alt="sourire-pour-tous" />
+        </figure>
+      </div>
+      <div id="photo3">
+        <img src="images\Dons_Association.jpg"  id="Dons_Association" alt="Dons_Association" />
+      </div>
+    </div>
+    </section>
+    <section id="CIT-2">
+      <figure id="icon5">
+        <img src="images\France_Footer.png" alt="France_Footer"   id="France_Footer" />
+        <figcaption id="description_1">Support Français</figcaption>
+        <figcaption id="description_2">Une équipe dédiée au Support pour répondre à toutes vos questions.</figcaption>
+      </figure>
+      <figure id="icon6">
+        <img src="images\Secure_Footer.png" alt="Secure_Footer"   id="Secure_Footer" />
+        <figcaption id="description_1"> Paiement Sécurisé</figcaption>
+        <figcaption id="description_2">Nous confions la gestion de nos paiements en ligne à Stripe & Paypal   100% Sécurisés.</figcaption>
+      </figure>
+      <figure id="icon7">
+        <img src="images\Returns_Footer.png" alt="Returns_Footer"   id="Returns_Footer" />
+        <figcaption id="description_1"> Retours</figcaption>
+        <figcaption id="description_2">Nous proposons le  Satisfait ou Remboursé pendant 14 jours après réception des articles !</figcaption>
+      </figure>
+      <figure id="icon8">
+        <img src="images\Shipping_Footer.png" alt="Shipping_Footer"   id="Shipping_Footer" />
+        <figcaption id="description_1"> Livraison Gratuite</figcaption>
+        <figcaption id="description_2">Livraison gratuite gratuitement  à partir 50 EUR d'achat et sera expédiée en 24H/48H </figcaption>
+      </figure>
+    </section>    
+    <footer>
+      <div id="pieds-de-page">
+        <div id="logo-div">
+          <figure id="logo-2">
+            <img src="images\Logo_Footer_U-White.png"  alt="Logo_Footer_U-White" id="Logo_Footer_U-White" />
+          </figure>
+        </div>
+        <div id="nous-contacter-div">
+          <ul id="nous-contacter-list">
+            <li id="nous-contacter-list-titre"><a> Nous Contacter</a> </li>
+            <li><i class="fa fa-phone" aria-hidden="true" style="font-size:20px;" ></i><a> Telephone: 04 72 32 20 22 </a> </li>
+            <li><i class="fa fa-envelope" aria-hidden="true" style="font-size:20px;" ></i><a> Email: hello@gmail.com </a> </li>
+            <li><i class="fa fa-truck" aria-hidden="true" style="font-size:20px;" > </i><a> Suivre ma commande</a> </li>
+          </ul>
+        </div>
+        <div id="informations-div">
+          <ul id="informations-list">
+            <li id="informations-list-titre" ><a > Informations </a></li>
+            <li><a> Livraison et politique de retour </a></li>
+            <li><a> Conditions générales d'utilisation </a></li>
+            <li><a> politique de confidentialite </a></li>
+            <li><a> Mentions Legales</a></li>
+          </ul>
+        </div>
+        <div id="suivez-nous-div">
+          <h1 id="suivez-nous-titre"> Suivez Nous </h1>
+          <p id="suivez-nous-p1">  Inscrivez-vous à notre newsletter et recevez votre offre de bienvenue ! 
+          </p>
+          <form method="POST" action="">
+            <input type="text" id="champ-suivez-nous" value="nom@email.com" />
+            <a   id="je-minscris" href="" > &nbsp; &nbsp; Je m'inscris ! &nbsp;&nbsp;  </a>
+            <p id="suivez-nous-p2"> 
+              <input type="checkbox" id="je-coche" />
+                Je déclare être âgé(e) de 16 ans ou plus et accepter de recevoir des offres commerciales et personnalisées de U-WHITE.  Vous pouvez retirer votre consentement à tout moment 
+            </p>
+             <p>
+               Vous pouvez retirer votre consentement à tout moment via le lien de désinscription présent dans notre Newsletter ou bien en nous contactant par mail. Pour en savoir plus sur vos droits, consultez notre Politique de protection des données personnelles
+            </p>
+          </form>
+        </div>
+      </div>
+      <div id="footer-last-row">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div>
+      <p id="parfaits"> + 13500 clients satisfaits </p>
+    </footer>
+    <script src="slideMenu.js"> </script>
+    <script src="homepage.js"></script>
+    <script src="snow.js"></script>
+    <script src="menu.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  </body>
+  </html>

@@ -1,0 +1,5 @@
+Asynchronous programming
+- send 3 GET parallel requests 
+- send the resulting object as a POST request
+- handles the response from POST request and prints results to DOM
+- verify if there are no errors doing either the GET or the POST request

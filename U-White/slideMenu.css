@@ -1,0 +1,31 @@
+
+#slideMenu
+{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 0%;
+  height: 100%;
+  background-color: #F7F7F7;
+  transition:  width 1s;
+  
+}
+
+
+
+#menu1Clone
+{
+
+}
+
+#menu1Clone li 
+{
+ 
+ list-style-type: none;
+ margin-top: 50px;
+}
+BODY
+{ 
+	
+}

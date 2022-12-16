@@ -1,0 +1,29 @@
+#snow
+{
+
+animation-name: example ;
+animation-duration: var(--duration);
+animation-delay: var(--delay);
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+}
+
+
+/* snow flake animation */
+
+@keyframes example {     
+  from {
+    position: absolute;
+    top: var(--topstart);
+    left: var(--leftstart);
+    
+     }
+  to {
+    position: absolute;
+    top: var(--topend);
+    left:var(--leftend);
+
+  
+  }
+}

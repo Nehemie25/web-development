@@ -1,0 +1,109 @@
+@media only screen and (max-width: 900px) {
+ 
+#corps
+{  
+ 
+  width:100%;
+  margin:auto;
+ 
+} 
+
+#menu1
+{
+	display: flex;
+	flex-direction: column;
+}
+
+
+#corps
+{  
+ 
+  width:100%;
+  margin:auto;
+ 
+}
+
+
+#banniere
+{
+	display: none;
+}
+
+#contenu
+{
+	display: flex;
+	flex-direction: column;
+}
+
+#voyageur
+{
+	  width:100%;
+	  
+	 
+}
+
+#bulle-div
+{
+	display: none;
+}
+
+
+#auteur
+  {
+	  width:100%;
+	  margin-top:10px;
+	  border:1px solid #706b64;
+	 background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+	  
+  }
+
+ #fleche-div
+ {
+ 	display: none;
+ }
+
+ #zozor
+ {
+ 	float: right;
+ }
+
+ #multimedia
+   {
+	   display:flex;
+	   justify-content:flex-end;
+   }
+
+ #pied-de-page
+ {
+ 	display: flex;
+ 	flex-direction: column;
+ }
+
+#tweet
+{
+	width: 100%;
+	margin-bottom: 5px;
+} 
+
+#titre-tweet
+{
+	text-align: center;
+}
+
+#photos
+{
+	width: 100%;
+	margin-bottom: 5px;
+} 
+
+#amis
+{
+	width: 100%;
+} 
+  
+}

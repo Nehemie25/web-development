@@ -1,0 +1,37 @@
+.lmj-footer {
+	color: black;
+	padding: 32px;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	font-weight: 500;
+	background: url('logo.png') repeat-x top;
+}
+
+.lmj-footer-elem {
+	margin-bottom: 10px;
+}
+.lmj-footer-field
+{
+	display: inline-block;
+	
+	width: 200px;
+	height: 25px;
+	margin-right: 15px;
+}
+
+.lmj-footer-je-minscris
+{
+	
+
+	display: inline-block;
+	width: 100px;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #31b472;
+	color: white;
+
+}
