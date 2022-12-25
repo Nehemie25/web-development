@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import logo from '../../assets/logo.png'
+import darkLogo from '../../assets/darkLogo.png'
+import {useTheme} from '../../utils/Hooks'
 function Header() {
+    const {theme} = useTheme()
 	const HomeHeader = styled.header`
 		width: 95%;
 		margin: auto;
@@ -11,6 +14,7 @@ function Header() {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		color: ${({$isDark}) => $isDark ? 'white' : colors.secondary };
 	`
 	const HeaderLogo = styled.img`
 		width: 10%;
@@ -20,7 +24,7 @@ function Header() {
 		width: 20%;
 		height: 30px;
 		display: flex;
-		flwx-direction: row;
+		flex-direction: row;
 		justify-content: space-between;
 	`
 	const SelectedLink = styled(Link)`
@@ -32,15 +36,15 @@ function Header() {
 	`
 	const HeaderLink = styled(Link)`
 		text-decoration: none;
-		color: ${colors.secondary};
+		color: ${({$isDark}) => $isDark ? 'white' : colors.secondary };
 	`
 
 	return (
-		<HomeHeader>
-			<HeaderLogo src={logo} alt="logo" />
+		<HomeHeader  $isDark = {theme === 'light'}>
+			<HeaderLogo src={theme ==='light' ?  darkLogo : logo} alt="logo" />
 			<HeaderNav>
-				<HeaderLink to="/"> Accueil </HeaderLink>
-				<HeaderLink to="/freelances"> Profils </HeaderLink>
+				<HeaderLink $isDark = {theme === 'light'} to="/"> Accueil </HeaderLink>
+				<HeaderLink  $isDark = {theme === 'light'} to="/freelances"> Profils </HeaderLink>
 				<SelectedLink  to="/survey/1" > &nbsp; &nbsp;  Faire le test &nbsp; &nbsp;  </SelectedLink>
 			</HeaderNav>
 		</HomeHeader>

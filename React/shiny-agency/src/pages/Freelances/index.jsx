@@ -1,14 +1,14 @@
 import Card from '../../components/Card'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
-import { useState, useEffect } from 'react'
 import { Loader } from '../../utils/Atoms'
+import {useFetch, useTheme} from '../../utils/Hooks'
 
 function Freelances() {
-	const [freelanceProfiles, setFreelanceProfiles] = useState([])
-	const [isDataLoading, setDataLoading] = useState(true)
-
+	const {theme} = useTheme()
+	
 	const FreelanceDiv = styled.div`
+     color: ${({$isDark}) => $isDark ? 'white': colors.secondary};
 		width: 90%;
 		margin: auto;
 		height: 700px;
@@ -27,32 +27,22 @@ function Freelances() {
 		color: ${colors.secondary};
 	`
 
-	useEffect(() => {
-		async function fetchProfiles() {
-			try {
-				const response = await fetch('http://localhost:8000/freelances')
-				const profiles = await response.json()
-				setFreelanceProfiles(profiles.freelancersList)
-			} catch (err) {
-				console.log(err)
-			} finally {
-				setDataLoading(false)
-			}
-		}
-		fetchProfiles()
-	}, [])
+				const {data, isLoading} =  useFetch('http://localhost:8000/freelances')
+				const {freelancersList} = data
+				
+			
 
 	return (
-		<FreelanceDiv>
+		<FreelanceDiv $isDark ={theme ==='light'}>
 			<h2> Trouvez votre prestataire </h2>
 			<FreelanceText>
 				Chez Shiny nous reunissons les meilleurs profils pour vous
 			</FreelanceText>
-			{isDataLoading ? (
+			{isLoading ? (
 				<Loader />
 			) : (
-				<FreelanceSubDiv>
-					{freelanceProfiles.map((prof) => (
+				<FreelanceSubDiv >
+					{freelancersList.map((prof) => (
 						<Card
 							key={prof.id}
 							label={prof.name}

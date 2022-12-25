@@ -2,9 +2,9 @@ import { PropTypes } from 'prop-types'
 import DefaultPicture from '../../assets/profile.png'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
+import {useTheme} from '../../utils/Hooks'
 function Card({ label, title, picture }) {
-
-     const CardDiv = styled.div`
+  const CardDiv = styled.div`
      width: 30%;
      margin: 10px;
      height: 230px;
@@ -12,7 +12,8 @@ function Card({ label, title, picture }) {
      flex-direction: column;
      justify-content: space-around;
      align-items: center;
-     background-color: ${colors.backgroundLight};
+     background-color: ${({$isDark}) => $isDark ? colors.backgroundDark: colors.backgroundLight};
+     color: ${({$isDark}) => $isDark ? 'white': colors.secondary};
      border-radius: 30px;
      transition: 200ms;
      &: hover {
@@ -26,10 +27,14 @@ function Card({ label, title, picture }) {
     const TitleText = styled.span`
     color: ${colors.primary};
     `
+
+  const {theme} = useTheme();
+
+     
    
 
   return (
-    <CardDiv>
+    <CardDiv $isDark = {theme ==='light'}>
       <TitleText>{title}</TitleText>
       <img src={picture} alt="freelance" height={80} width={80} border-radius = "50px"/>
       <LabelText>{label}</LabelText>

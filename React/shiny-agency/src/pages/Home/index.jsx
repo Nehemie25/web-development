@@ -2,11 +2,17 @@ import styled from 'styled-components'
 import illustration from '../../assets/home-illustration.svg'
 import colors from '../../utils/style/colors'
 import {Link} from 'react-router-dom'
+import {ThemeContext} from '../../utils/context'
+import {useContext} from 'react'
 function Home() {
+const { theme } = useContext(ThemeContext)
+  
   const HomeDiv = styled.div`
     width: 90%;
     margin: auto;
-    background-color: ${colors.backgroundLight};
+    background-color: ${({$isDark}) => $isDark ? colors.backgroundDark: colors.backgroundLight};
+    color: ${({$isDark}) => $isDark ? 'white': colors.secondary};
+    height:700px;
     display: flex;
     justify-content: center;
     height:700px;
@@ -36,7 +42,7 @@ function Home() {
     margin-top: 100px;
   `
   return (
-    <HomeDiv>
+    <HomeDiv $isDark = {theme ==='light'}>
       <HomeDescription>
         <h1>
           Reperez vos besoin, <br /> On s'occupe du reste, <br /> avec les

@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 import error from '../../assets/error.png'
 import colors from '../../utils/style/colors'
+import {useTheme} from '../../utils/Hooks'
 function Error() {
+    const {theme} = useTheme()
 
     const ErrorDiv = styled.div`
     width: 90%;
     margin: auto;
-    background-color: ${colors.backgroundLight};
+    background-color: ${({$isDark}) => $isDark ? colors.backgroundDark: colors.backgroundLight};
+    color:  ${({$isDark}) => $isDark ? 'white' : colors.secondary } !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +29,7 @@ function Error() {
     text-align: center;
     `
     return (
-        <ErrorDiv>
+        <ErrorDiv $isDark = {theme ==='light'}>
         <ErrorDescription>Oups...</ErrorDescription>
         <ErrorJpg src={error} />
             <ErrorDescription>Il semblerait qu'il yait une erreur</ErrorDescription>

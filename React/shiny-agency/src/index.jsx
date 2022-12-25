@@ -9,17 +9,21 @@ import Results from './pages/Results'
 import Error from './pages/Error'
 import Freelances from './pages/Freelances'
 import ThemeProvider from './utils/context'
-import GolbalStyle from './styles/GlobalStyle'
+import { createGlobalStyle } from 'styled-components'
+import GlobalStyle from './styles/GlobalStyle'
 import  {SurveyProvider}  from './utils/context'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider>
-        <GolbalStyle />
+        <GlobalStyle />
         <Header />
          <SurveyProvider>
         <Routes>

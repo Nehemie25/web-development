@@ -1,20 +1,12 @@
-import { useState, useEffect, useContext } from 'react'
+import {useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Loader } from '../../utils/Atoms'
 import colors from '../../utils/style/colors'
+import {useFetch, useTheme} from '../../utils/Hooks'
 import styled from 'styled-components'
 import { SurveyContext } from '../../utils/context'
-function Survey() {
-	let isFirst = false
-	let isLast = false
-	const { questionNumber } = useParams()
-	let questionNumberInt = parseInt(questionNumber)
-	const { saveAnswers, answers } = useContext(SurveyContext)
-	const [error, setError] = useState(false)
-	const [surveyData, setData] = useState({})
-	const [isLoading, setLoading] = useState(true)
 
-	const ResponseDiv = styled.div`
+const ResponseDiv = styled.div`
 		width: 25%;
 		margin: auto;
 		display: flex;
@@ -31,12 +23,13 @@ function Survey() {
 		border-radius: 25px;
 		border: 1px solid
 			${(props) => (props.isSelected ? `${colors.primary}` : `transparent`)};
-		background-color: ${colors.backgroundLight};
-		color: ${colors.secondary};
+		background-color: ${({$isDark}) => $isDark ? colors.backgroundDark: colors.backgroundLight};
+        color:  ${({$isDark}) => $isDark ? 'white' : colors.secondary } !important;
 	`
 
 	const SurveyDiv = styled.div`
 		text-align: center;
+		color:  ${({$isDark}) => $isDark ? 'white' : colors.secondary };
 	`
 	const SurveyTitle = styled.h2`
 		text-decoration: underline ${colors.primary};
@@ -44,12 +37,24 @@ function Survey() {
 	const SurveyContent = styled.p``
 	const NavLink = styled(Link)`
 		margin: 20px;
-		text-decoration: underline ${colors.primary};
+		text-decoration: underline ${({$isDark}) => $isDark ? 'white' : colors.secondary };;
+		color:  ${({$isDark}) => $isDark ? 'white' : colors.secondary };
 	`
+
+function Survey() {
+	let isFirst = false
+	let isLast = false
+	const {theme} = useTheme()
+	const { questionNumber } = useParams()
+	let questionNumberInt = parseInt(questionNumber)
+	const { saveAnswers, answers } = useContext(SurveyContext)
+	
+
+	
 
 	function saveReply(answer) {
 		saveAnswers({ [questionNumberInt]: answer })
-		console.log(answers)
+		
 	}
 
 	if (questionNumberInt === 1) {
@@ -58,31 +63,21 @@ function Survey() {
 		isLast = true
 	}
 
-	useEffect(() => {
-		async function fetchSurvey() {
-			try {
-				const response = await fetch('http://localhost:8000/survey')
-				const { surveyData } = await response.json()
-				setData(surveyData)
-			} catch (err) {
-				console.log(err)
-				setError(true)
-			} finally {
-				setLoading(false)
-			}
-		}
 
-		fetchSurvey()
-	}, [])
-
+		const {data, isLoading, error } = useFetch('http://localhost:8000/survey')
+		const {surveyData} = data
+        console.log( data)
+	
+		
 
 
 	if (error) {
+	
 		return <div> Something went wrong </div>
 	}
 
 	return (
-		<SurveyDiv>
+		<SurveyDiv $isDark ={theme ==='light'}>
 			<SurveyTitle> Question {questionNumberInt} </SurveyTitle>
 			{isLoading ? (
 				<Loader />
@@ -93,8 +88,8 @@ function Survey() {
 				</SurveyContent>
 			)}
 
-			<ResponseDiv>
-				<ResponseButton
+			<ResponseDiv >
+				<ResponseButton  $isDark ={theme ==='light'}
 					onClick={() => {
 						saveReply(true)
 					}}
@@ -102,7 +97,7 @@ function Survey() {
 				>
 					OUI
 				</ResponseButton>
-				<ResponseButton
+				<ResponseButton  $isDark ={theme ==='light'}
 					onClick={() => {
 						saveReply(false)
 					}}
@@ -113,12 +108,12 @@ function Survey() {
 			</ResponseDiv>
 
 			{!isFirst && (
-				<NavLink to={`/survey/${questionNumberInt - 1}`}> Precedent </NavLink>
+				<NavLink to={`/survey/${questionNumberInt - 1}`} $isDark ={theme ==='light'}> Precedent </NavLink>
 			)}
 			{isLast ? (
-				<NavLink to="/results"> Results </NavLink>
+				<NavLink to="/results" $isDark ={theme ==='light'}> Results </NavLink>
 			) : (
-				<NavLink to={`/survey/${questionNumberInt + 1}`}> Suivant </NavLink>
+				<NavLink to={`/survey/${questionNumberInt + 1}`} $isDark ={theme ==='light'}> Suivant </NavLink>
 			)}
 		</SurveyDiv>
 	)
