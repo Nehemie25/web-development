@@ -43,7 +43,9 @@ function Freelances() {
 			) : (
 				<FreelanceSubDiv >
 					{freelancersList.map((prof) => (
-						<Card
+						<Card 
+							
+						
 							key={prof.id}
 							label={prof.name}
 							title={prof.job}

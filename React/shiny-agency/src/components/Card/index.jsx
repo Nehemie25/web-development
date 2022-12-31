@@ -3,8 +3,9 @@ import DefaultPicture from '../../assets/profile.png'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
 import {useTheme} from '../../utils/Hooks'
-function Card({ label, title, picture }) {
-  const CardDiv = styled.div`
+import {useState} from 'react'
+
+const CardDiv = styled.div`
      width: 30%;
      margin: 10px;
      height: 230px;
@@ -28,16 +29,24 @@ function Card({ label, title, picture }) {
     color: ${colors.primary};
     `
 
-  const {theme} = useTheme();
-
      
    
 
+function Card({ label, title, picture }) {
+    const {theme} = useTheme()
+    const [isFavourite, setFavourite] = useState(false)
+    const star = isFavourite ? '⭐️':''
+
+  
   return (
-    <CardDiv $isDark = {theme ==='light'}>
-      <TitleText>{title}</TitleText>
+    <CardDiv onClick = {()=>{
+      setFavourite(true)
+    }}
+
+      $isDark = {theme ==='light'}>
+      <TitleText data-testid ="title">{star}{title}{star}</TitleText>
       <img src={picture} alt="freelance" height={80} width={80} border-radius = "50px"/>
-      <LabelText>{label}</LabelText>
+      <LabelText data-testid ="name">{label}</LabelText>
     </CardDiv>
   )
 }

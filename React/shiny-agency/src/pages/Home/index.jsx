@@ -4,6 +4,12 @@ import colors from '../../utils/style/colors'
 import {Link} from 'react-router-dom'
 import {ThemeContext} from '../../utils/context'
 import {useContext} from 'react'
+
+
+export function sum (a, b) {
+  return a+b
+}
+
 function Home() {
 const { theme } = useContext(ThemeContext)
   

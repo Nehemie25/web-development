@@ -43,7 +43,7 @@ const SelectedLink = styled(Link)`
     line-height: 30px;
     `
 
-function formatFetchParams(answers) {
+export function formatFetchParams(answers) {
   const answerNumbers = Object.keys(answers)
 
   return answerNumbers.reduce((previousParams, answerNumber, index) => {
@@ -54,7 +54,16 @@ function formatFetchParams(answers) {
 }
 
 
+export function formatJobList (title, listLength, index) {
 
+if(index === listLength -1) {
+  return title
+}
+
+
+
+return `${title},`
+}
 
 function Results() {
 	const { theme } = useTheme()
@@ -86,14 +95,12 @@ const {resultsData} = data
       <Entete>
      
       
-      <h2> Les competences dont vous avez besoin: <Jobs>{resultsData && resultsData.reduce ((previous, current, index) => {
+      <h2> Les competences dont vous avez besoin{resultsData && resultsData.map((results, index) => 
 
+       <Jobs key = {`${results.title}-${index}`}> {formatJobList(results.title,resultsData.length, index)}</Jobs>
+
+      )} 
       
-
-
-       return  (`${previous}${ (index === resultsData.length || index ===0) ? '' : ','}${current.title}`)
-      }, '')} 
-      </Jobs>
       </h2> 
 
       <SelectedLink to="/survey/1"> &nbsp; Decouvrez nos profiles &nbsp;</SelectedLink>
